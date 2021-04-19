@@ -1,0 +1,40 @@
+=== COMANDOS DOCKER ===
+docker ps -> Listar containers em execução
+docker ps -a -> Listar todos containers disponíveis
+docker start nome_imagem
+docker rm nome_imagem
+
+docker-compose up -> Execução do Compose 
+docker-compose up -d -> Execução do Compose em background
+docker-compose start -> Iniciar todos os serviços que estão dentro do Compose
+docker-compose stop -> Parar todos os serviços que estão dentro do Compose
+docker-compose down -> Remove tudo que foi criado!
+
+docker exec -it nome_imagem /bin/bash -> Acessa o container
+Ctrl + d ou exit para sair
+
+docker logs nome_imagem
+docker logs nome_imagem -f -> Observação dos logs em tempo de execução
+
+// Recriar estrutura com novas configurações
+docker-compose --force-recreate
+
+// Listar endereço de IP da imagem no Docker
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' nome_imagem
+docker exec nome_imagem cat /etc/hosts
+
+Problemas com network_mode is incompatible with ports_binding
+https://www.notion.so/Refatora-o-Docker-com-TypeORM-4500fc0d075349ac9b97d670e734d41b
+
+----------------------------------------------------------------------------------------------------
+
+=== Interações banco de dados - Migrations ===
+
+// Criação de Migrations
+yarn typeorm migration:create -n CreateCategories
+
+// Executando as Migrations
+yarn typeorm migration:run
+
+// Revertendo a Migration
+yarn typeorm migration:revert
