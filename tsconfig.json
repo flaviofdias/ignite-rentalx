@@ -4,21 +4,15 @@
     "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@modules/*": [
-        "modules/*"
-      ],
-      "@config/*": [
-        "config/*"
-      ],
-      "@shared/*": [
-        "shared/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ]
-    },
+      "@modules/*": ["modules/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@config/*": ["config/*"],
+      "@shared/*": ["shared/*"],
+      "@utils/*": ["utils/*"],
+      "@errors/*": ["errors/*"]
+    },    
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
