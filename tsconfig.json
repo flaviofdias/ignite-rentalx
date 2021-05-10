@@ -7,11 +7,9 @@
     "baseUrl": "./src",
     "paths": {
       "@modules/*":     ["modules/*"],
-      "@middlewares/*": ["middlewares/*"],
       "@config/*":      ["config/*"],
       "@shared/*":      ["shared/*"],
       "@utils/*":       ["utils/*"],
-      "@errors/*":      ["errors/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
