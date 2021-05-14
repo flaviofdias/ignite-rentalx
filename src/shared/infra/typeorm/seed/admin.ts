@@ -1,4 +1,4 @@
-import { hash } from "bcrypt";
+import { compareSync, hash } from "bcrypt";
 import { v4 as uuidV4 } from "uuid";
 
 import createConnection from "../index";
